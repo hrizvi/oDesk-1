@@ -1,0 +1,30 @@
+<div ng-include="'partials/navbar.html'"></div>
+
+<div>
+    <h2 >Toggle Items</h2>
+</div>
+<div class="alert alert-danger alert-dismissable" ng-show="message">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <strong>Warning!</strong> {{message}}
+</div>
+<div class="well">
+    <div class="panel panel-default" id="newDiv">
+        <div class="panel-heading">
+            <h3 class="panel-title">Add Items</h3>
+        </div>
+        <div class="panel-body">
+            <form name="myForm">
+                <label>Name:</label>
+                <input id="name" name="name" type="text" required placeholder="Item Name" ng-model="newItem.name">
+                <button type="submit" id="saveBtn" class="btn btn-primary" ng-click="save()" ng-disabled="(myForm.$pristine || myForm.$invalid)">Save</button>
+            </form>
+        </div>
+    </div>
+    <div id="toggleDiv">
+        <a id="toggleBtn" class="btn btn-danger" ng-click="toggleAll()">Toggle All</a>
+    </div>
+    <div class="row" id="itemList" ng-repeat="item in items">
+        <h3 id="itemName">{{item.name}}</h3>
+        <div class="onOffButton" ng-class="{ onButton: item.toggle, offButton: !item.toggle }" ng-click="toggle(item)"></div>
+    </div>
+</div>

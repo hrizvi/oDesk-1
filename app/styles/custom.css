@@ -1,0 +1,47 @@
+.onOffButton {
+    max-width: 100px !important;
+    max-height: 100px !important;
+
+    min-width: 100px !important;
+    min-height: 100px !important;
+
+    display: inline-block;
+    float: right;
+}
+
+.onButton {
+
+    vertical-align: middle;
+    background:url(../images/on.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.offButton {
+    vertical-align: middle;
+    background:url(../images/off.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+#itemName {
+    padding: 20px;
+    display: inline-block;
+    float: left;
+}
+
+#itemList {
+    clear: both;
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+}
+
+#newDiv {
+    float: left;
+}
+
+#toggleDiv {
+    float: right;
+}
