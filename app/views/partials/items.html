@@ -20,9 +20,11 @@
             </form>
         </div>
     </div>
+
     <div id="toggleDiv">
         <a id="toggleBtn" class="btn btn-danger" ng-click="toggleAll()">Toggle All</a>
     </div>
+
     <div class="row" id="itemList" ng-repeat="item in items">
         <h3 id="itemName">{{item.name}}</h3>
         <div class="onOffButton" ng-class="{ onButton: item.toggle, offButton: !item.toggle }" ng-click="toggle(item)"></div>
